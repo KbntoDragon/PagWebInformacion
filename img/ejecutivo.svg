@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Foto de ejemplo: reemplázala por la foto real (ej: ejecutivo.jpg) -->
+  <rect width="400" height="400" fill="#dfe5ee"/>
+  <circle cx="200" cy="155" r="70" fill="#a9b6c8"/>
+  <path d="M70 400c0-80 58-140 130-140s130 60 130 140z" fill="#a9b6c8"/>
+</svg>

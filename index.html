@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- data-theme="light" fija el tema claro de Bulma (si lo quitas, Bulma cambia a oscuro según el sistema del visitante) -->
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre Empresa | Asesoría y ventas</title>
+    <meta name="description" content="Asesoría personalizada y ventas. Contáctanos por WhatsApp o déjanos tus datos y te llamamos.">
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+
+    <!-- Bulma: componentes y grilla. estilos.css va después para poder sobrescribirlo -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ===================== ENCABEZADO / MENÚ ===================== -->
+    <nav class="navbar is-fixed-top barra" aria-label="Menú principal">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item marca" href="#inicio">
+                    <img src="img/logo.svg" alt="Logo de Nombre Empresa" width="40" height="40">
+                    <span class="marca__nombre">Nombre Empresa</span>
+                </a>
+                <a role="button" class="navbar-burger" id="menu-boton"
+                   aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu" id="menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#ejecutivo">Quién soy</a>
+                    <a class="navbar-item" href="#servicios">Servicios</a>
+                    <div class="navbar-item">
+                        <a class="button is-marca" href="#contacto">Contáctame</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ===================== PORTADA ===================== -->
+        <section class="section portada" id="inicio">
+            <div class="container">
+                <div class="portada__texto">
+                    <p class="portada__etiqueta">Asesoría y ventas</p>
+                    <h1 class="title is-1 is-spaced portada__titulo">Te ayudo a encontrar la mejor opción para ti</h1>
+                    <p class="subtitle portada__subtitulo">
+                        Atención personalizada, respuestas claras y acompañamiento en todo el proceso.
+                    </p>
+                    <div class="buttons">
+                        <a class="button is-success is-medium"
+                           href="https://wa.me/56950618940?text=Hola,%20quiero%20consultar%20por%20ventas"
+                           target="_blank" rel="noopener">
+                            Escríbeme por WhatsApp
+                        </a>
+                        <a class="button is-white is-outlined is-medium" href="#contacto">
+                            Déjame tus datos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== EJECUTIVO ===================== -->
+        <section class="section" id="ejecutivo">
+            <div class="container">
+                <div class="columns is-vcentered is-variable is-8">
+                    <div class="column is-4">
+                        <figure class="image is-1by1 ejecutivo__foto">
+                            <!-- Reemplaza por la foto real, ej: img/ejecutivo.jpg -->
+                            <img src="img/ejecutivo.svg" alt="Foto de Nombre Apellido" width="400" height="400">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <p class="etiqueta-seccion">Quién soy</p>
+                        <h2 class="title is-2">Nombre Apellido</h2>
+                        <p class="subtitle is-5 ejecutivo__cargo">Ejecutivo de ventas · Nombre Empresa</p>
+                        <div class="content">
+                            <p>
+                                Escribe aquí una presentación breve: tu experiencia, en qué te especializas
+                                y por qué los clientes confían en ti. Dos o tres frases bastan.
+                            </p>
+                        </div>
+                        <div class="columns is-mobile datos">
+                            <div class="column">
+                                <p class="datos__numero">+10</p>
+                                <p class="datos__texto">años de experiencia</p>
+                            </div>
+                            <div class="column">
+                                <p class="datos__numero">500+</p>
+                                <p class="datos__texto">clientes atendidos</p>
+                            </div>
+                            <div class="column">
+                                <p class="datos__numero">24 h</p>
+                                <p class="datos__texto">tiempo de respuesta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SERVICIOS ===================== -->
+        <section class="section fondo-alterno" id="servicios">
+            <div class="container">
+                <p class="etiqueta-seccion has-text-centered">Servicios</p>
+                <h2 class="title is-2 has-text-centered">¿Cómo te puedo ayudar?</h2>
+                <div class="columns mt-5">
+                    <div class="column">
+                        <div class="box servicio">
+                            <h3 class="title is-5">Asesoría personalizada</h3>
+                            <p>Revisamos juntos lo que necesitas y te recomiendo la opción que más te conviene.</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box servicio">
+                            <h3 class="title is-5">Cotizaciones a medida</h3>
+                            <p>Te envío una propuesta clara, con precios y condiciones sin letra chica.</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box servicio">
+                            <h3 class="title is-5">Seguimiento post venta</h3>
+                            <p>Sigo disponible después de la compra para resolver cualquier duda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CONTACTO ===================== -->
+        <section class="section" id="contacto">
+            <div class="container contacto">
+                <p class="etiqueta-seccion has-text-centered">Contacto</p>
+                <h2 class="title is-2 is-spaced has-text-centered">Déjame tus datos y te contacto</h2>
+                <p class="subtitle is-6 has-text-centered">
+                    ¿Prefieres hablar ahora?
+                    <a href="https://wa.me/56950618940?text=Hola,%20quiero%20consultar%20por%20ventas"
+                       target="_blank" rel="noopener">Escríbeme por WhatsApp</a>.
+                </p>
+
+                <!-- novalidate: la validación la hace js/main.js con mensajes en español -->
+                <form class="box formulario" id="form-contacto" novalidate>
+                    <div class="columns mb-0">
+                        <div class="column field mb-0">
+                            <label class="label" for="nombre">Nombre</label>
+                            <div class="control">
+                                <input class="input" type="text" id="nombre" name="nombre"
+                                       autocomplete="given-name" maxlength="80" required>
+                            </div>
+                            <p class="help is-danger" id="error-nombre"></p>
+                        </div>
+                        <div class="column field mb-0">
+                            <label class="label" for="apellido">Apellido</label>
+                            <div class="control">
+                                <input class="input" type="text" id="apellido" name="apellido"
+                                       autocomplete="family-name" maxlength="80" required>
+                            </div>
+                            <p class="help is-danger" id="error-apellido"></p>
+                        </div>
+                    </div>
+
+                    <div class="columns mb-0">
+                        <div class="column field mb-0">
+                            <label class="label" for="celular">Celular</label>
+                            <div class="control">
+                                <input class="input" type="tel" id="celular" name="celular"
+                                       inputmode="tel" autocomplete="tel" placeholder="+56 9 1234 5678"
+                                       maxlength="20" required>
+                            </div>
+                            <p class="help is-danger" id="error-celular"></p>
+                        </div>
+                        <div class="column field mb-0">
+                            <label class="label" for="correo">
+                                Correo <span class="opcional">(opcional)</span>
+                            </label>
+                            <div class="control">
+                                <input class="input" type="email" id="correo" name="correo"
+                                       autocomplete="email" placeholder="nombre@correo.cl" maxlength="120">
+                            </div>
+                            <p class="help is-danger" id="error-correo"></p>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="consulta">Tu consulta</label>
+                        <div class="control">
+                            <textarea class="textarea" id="consulta" name="consulta" rows="4"
+                                      maxlength="2000" placeholder="Cuéntame qué necesitas" required></textarea>
+                        </div>
+                        <p class="help is-danger" id="error-consulta"></p>
+                    </div>
+
+                    <!-- Anti-spam (honeypot): oculto para personas; si viene lleno, lo llenó un bot -->
+                    <div class="trampa" aria-hidden="true">
+                        <label for="sitio_web">No completes este campo</label>
+                        <input type="text" id="sitio_web" name="sitio_web" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="field">
+                        <label class="checkbox">
+                            <input type="checkbox" id="acepta" name="acepta" required>
+                            Acepto que me contacten con los datos que entrego para responder mi consulta.
+                        </label>
+                        <p class="help is-danger" id="error-acepta"></p>
+                    </div>
+
+                    <div class="field">
+                        <button class="button is-marca is-medium is-fullwidth" type="submit" id="boton-enviar">
+                            Enviar consulta
+                        </button>
+                    </div>
+
+                    <div class="notification is-hidden" id="form-estado" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== PIE DE PÁGINA ===================== -->
+    <footer class="footer pie">
+        <div class="container has-text-centered">
+            <p><strong>Nombre Empresa</strong></p>
+            <p>
+                <a href="https://wa.me/56950618940" target="_blank" rel="noopener">+56 9 5061 8940</a>
+            </p>
+            <p class="pie__copy">© <span id="anio">2026</span> Nombre Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp (siempre visible) -->
+    <a class="wsp-flotante"
+       href="https://wa.me/56950618940?text=Hola,%20quiero%20consultar%20por%20ventas"
+       target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.04 2 11c0 2.6 1.24 4.94 3.22 6.58L4.5 22l4.62-2.4c.92.26 1.88.4 2.88.4 5.52 0 10-4.04 10-9S17.52 2 12 2zm4.6 12.36c-.2.56-1.16 1.08-1.62 1.12-.42.04-.94.06-1.52-.1-.35-.1-.8-.26-1.37-.5-2.42-1.04-4-3.46-4.12-3.62-.12-.16-.98-1.3-.98-2.48s.62-1.76.84-2c.22-.24.48-.3.64-.3h.46c.15 0 .35-.05.55.42.2.48.68 1.66.74 1.78.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.25.31-.36.42-.12.12-.24.25-.1.49.14.24.62 1.02 1.33 1.65.92.82 1.69 1.07 1.93 1.19.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.14 1.16z"/>
+        </svg>
+        <span class="wsp-flotante__texto">WhatsApp</span>
+    </a>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

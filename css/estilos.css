@@ -1,0 +1,214 @@
+/* =========================================================
+   Estilos propios. Bulma pone la base; aquí va tu marca.
+   Para cambiar los colores de la empresa, edita solo :root.
+   ========================================================= */
+
+:root {
+    --marca: #1e3a5f;          /* color principal (azul marino) */
+    --marca-oscuro: #142840;   /* hover y fondos oscuros */
+    --acento: #e0a84a;         /* detalles y etiquetas */
+    --texto-suave: #5b6677;
+    --fondo-alterno: #f4f6f9;
+    --wsp: #15803d;            /* verde WhatsApp con buen contraste para texto blanco */
+    --wsp-oscuro: #166534;
+    --alto-barra: 4rem;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--alto-barra);   /* que el menú fijo no tape los títulos */
+}
+
+body {
+    background-color: #fff;
+}
+
+/* ---------- Botón con el color de la marca ---------- */
+.button.is-marca {
+    background-color: var(--marca);
+    border-color: transparent;
+    color: #fff;
+}
+.button.is-marca:hover,
+.button.is-marca:focus-visible {
+    background-color: var(--marca-oscuro);
+    color: #fff;
+}
+.button.is-marca[disabled] {
+    background-color: var(--marca);
+    opacity: 0.6;
+}
+
+/* ---------- Menú ---------- */
+.barra {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    min-height: var(--alto-barra);
+}
+.marca {
+    gap: 0.6rem;
+}
+.marca img {
+    max-height: 2.5rem;
+}
+.navbar-burger {
+    color: var(--marca);
+}
+.marca__nombre {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--marca);
+}
+
+/* ---------- Portada ---------- */
+.portada {
+    background: linear-gradient(135deg, var(--marca) 0%, var(--marca-oscuro) 100%);
+    padding-top: calc(var(--alto-barra) + 4rem);
+    padding-bottom: 5rem;
+}
+.portada__texto {
+    max-width: 40rem;
+}
+.portada__etiqueta {
+    color: var(--acento);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+.portada .portada__titulo {
+    color: #fff;
+    line-height: 1.15;
+}
+.portada .portada__subtitulo {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+    .portada .portada__titulo {
+        font-size: 2.25rem;
+    }
+}
+
+/* ---------- Etiqueta pequeña sobre cada título ---------- */
+.etiqueta-seccion {
+    color: var(--acento);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.fondo-alterno {
+    background-color: var(--fondo-alterno);
+}
+
+/* ---------- Ejecutivo ---------- */
+.ejecutivo__foto {
+    max-width: 22rem;
+    margin: 0 auto;
+}
+.ejecutivo__foto img {
+    border-radius: 1rem;
+    object-fit: cover;
+}
+.ejecutivo__cargo {
+    color: var(--texto-suave);
+}
+.datos {
+    margin-top: 1rem;
+}
+.datos__numero {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--marca);
+    line-height: 1.2;
+}
+.datos__texto {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+/* ---------- Servicios ---------- */
+.servicio {
+    height: 100%;
+    border-top: 4px solid var(--acento);
+}
+.servicio p {
+    color: var(--texto-suave);
+}
+
+/* ---------- Formulario ---------- */
+.contacto {
+    max-width: 46rem;
+}
+.formulario {
+    margin-top: 2rem;
+}
+.opcional {
+    font-weight: 400;
+    color: var(--texto-suave);
+}
+.help:empty {
+    display: none;
+}
+
+/* Honeypot: fuera de la pantalla, no con display:none (algunos bots lo detectan) */
+.trampa {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* ---------- Pie ---------- */
+.pie {
+    background-color: var(--marca-oscuro);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 3rem 1.5rem 6rem;   /* espacio abajo para que el botón flotante no tape el texto */
+}
+.pie strong {
+    color: #fff;
+}
+.pie a {
+    color: #fff;
+    text-decoration: underline;
+}
+.pie__copy {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+/* ---------- Botón flotante de WhatsApp ---------- */
+.wsp-flotante {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.1rem;
+    border-radius: 999px;
+    background-color: var(--wsp);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.wsp-flotante:hover,
+.wsp-flotante:focus-visible {
+    background-color: var(--wsp-oscuro);
+    color: #fff;
+    transform: translateY(-2px);
+}
+@media (max-width: 480px) {
+    .wsp-flotante {
+        padding: 0.85rem;
+    }
+    .wsp-flotante__texto {
+        display: none;   /* en celular solo el ícono */
+    }
+}
